@@ -62,10 +62,11 @@ public class Main {
         }
         return arr1;
     }
-
     public static void task5(double a) {
-        System.out.println(String.valueOf(a).split("\\.")[1].length()) ;
+
+        System.out.println(String.valueOf(a).split("\\.")[1].length());
     }
+
    public static int task6(int a){
        int[]arr=new int[a+1];
        arr[0]=arr[1]=1;
@@ -131,11 +132,12 @@ public class Main {
 
 
     public static void main(String[] args) {
-       /* System.out.println("Введите слово:");
+        System.out.println("Введите слово:");
         String str=inputStr();
         System.out.println("Введите число n: ");
         int n=inputInt();
         System.out.println("Результат:" + task1(str,n));
+
         System.out.println("Введите длину массива:");
         int[]arr=new int[inputInt()];
         System.out.println("Введите элементы массива: ");
@@ -160,23 +162,36 @@ public class Main {
         }
         System.out.println(Arrays.toString(task4(arr2)));
 
+        System.out.println("Введите число:");
         double d=inputDouble();
         task5(d);
 
+        System.out.println("Введите число:");
         int a=inputInt();
         System.out.println(task6(a));
 
+        System.out.println("Введите последовательность:");
         String arr4=inputStr();
         System.out.println(task7(arr4));
 
-        String str1=inputStr(); String str2=inputStr();
+        System.out.println("Введите 1 строку:");
+        String str1=inputStr();
+        System.out.println("Введите 2 строку:");
+        String str2=inputStr();
         System.out.println(task8(str1, str2));
 
-        String str3=inputStr(); String str4=inputStr();
+        System.out.println("Введите слово:");
+        String str3=inputStr();
+        System.out.println("Введите префикс:");
+        String str4=inputStr();
         System.out.println(isPrefix(str3, str4));
-        String str5=inputStr(); String str6=inputStr();
-        System.out.println(isSuffix(str5, str6));*/
+        System.out.println("Введите слово:");
+        String str5=inputStr();
+        System.out.println("Введите суффикс:");
+        String str6=inputStr();
+        System.out.println(isSuffix(str5, str6));
 
+        System.out.println("Введите номер шага:");
         int b=inputInt();
         System.out.println(task10(b));
     }
