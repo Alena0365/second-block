@@ -1,6 +1,7 @@
 package com.company;
 
 import java.io.IOException;
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Main {
@@ -62,19 +63,9 @@ public class Main {
         return arr1;
     }
 
-   /* public static int task5(String arr){
-        String str=".";
-        int count=0;
-        char[] ch=arr.toCharArray();
-        String [] arr1 = new String[ch.length];
-        for(int i=0;i<ch.length;i++){
-            arr1[i]= String.valueOf(ch[i]);
-            if( arr1[i]==str){
-                for(int j=i;j<ch.length;j++){count+=1;}
-            }
-        }
-        return count;
-    }*/
+    public static void task5(double a) {
+        System.out.println(String.valueOf(a).split("\\.")[1].length()) ;
+    }
    public static int task6(int a){
        int[]arr=new int[a+1];
        arr[0]=arr[1]=1;
@@ -87,18 +78,60 @@ public class Main {
    }
 
    public static boolean task7(String str){
-       String str1=new String;
-
-       for(int i=0;i<str.length();i++){
-           char sim=str.charAt(i);
-           str1+=sim;
-           if(str1.length()==5)&&(sim!=" ")
-
-       }
-       return ;
+           if (str.length() == 5) {
+               for (int i = 0; i < 5; i++) {
+                   if (str.charAt(i) < '0' || str.charAt(i) > '9')
+                       return false;
+               }
+               return true;
+           }
+           else
+               return false;
    }
+    public static boolean task8(String str, String str1){
+       char firstF; char firstS; char lastF=0; char lastS=0;
+        firstF=str.charAt(0);
+        firstS=str1.charAt(0);
+       for (int i = 0; i < str.length(); i++) {
+            lastF=str.charAt(i);
+        }
+        for (int j = 0; j < str1.length(); j++) {
+            lastS=str1.charAt(j);
+        }
+        if ((firstF==lastS) &&(lastF==firstS)){return true;}
+        else return false;
+    }
+    public static boolean isPrefix(String str, String str1){
+        for (int i = 0; i < str1.length(); i++){
+            if (str.charAt(i) == str1.charAt(i)){
+                return true;
+            }
+        }
+        return false;
+    }
+    public static boolean isSuffix(String str, String str1) {
+        for (int i = 1; i < str1.length(); i++){
+            if (str.charAt(str.length() - 1 - i) == str1.charAt(str1.length() - 1 - i)){
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public static int task10(int a){
+      int b=0;
+      for (int i=1; i<=a;i++){
+          if(i%2==1){
+              b+=3;
+          }
+          else {b-=1;}
+       }
+      return b;
+    }
+
+
     public static void main(String[] args) {
-      /*System.out.println("Введите слово:");
+       /* System.out.println("Введите слово:");
         String str=inputStr();
         System.out.println("Введите число n: ");
         int n=inputInt();
@@ -127,12 +160,24 @@ public class Main {
         }
         System.out.println(Arrays.toString(task4(arr2)));
 
+        double d=inputDouble();
+        task5(d);
 
-        String arr3=inputStr();
-        System.out.println(task5(arr3));
+        int a=inputInt();
+        System.out.println(task6(a));
 
-      int a=inputInt();
-      System.out.println(task6(a));*/
+        String arr4=inputStr();
+        System.out.println(task7(arr4));
 
+        String str1=inputStr(); String str2=inputStr();
+        System.out.println(task8(str1, str2));
+
+        String str3=inputStr(); String str4=inputStr();
+        System.out.println(isPrefix(str3, str4));
+        String str5=inputStr(); String str6=inputStr();
+        System.out.println(isSuffix(str5, str6));*/
+
+        int b=inputInt();
+        System.out.println(task10(b));
     }
 }
